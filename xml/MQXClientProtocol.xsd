@@ -1,0 +1,56 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mqxcp="http://dev.tpn.no/XML/MQX/ClientProtocol" xmlns:mcd="http://dev.tpn.no/XML/MQX/ClientProtocol/MocaCallData" targetNamespace="http://dev.tpn.no/XML/MQX/ClientProtocol">
+  <!--Simple types-->
+  <simpleType name="ms15idtype">
+    <restriction base="string" />
+  </simpleType>
+  <simpleType name="actionidtype">
+    <restriction base="string" />
+  </simpleType>
+  <simpleType name="mocaresponsetype">
+    <restriction base="string" />
+  </simpleType>
+  <simpleType name="mocarequestterminatecalltype">
+    <restriction base="string">
+      <enumeration value="C1" />
+      <enumeration value="C2" />
+      <enumeration value="C3" />
+      <enumeration value="C4" />
+      <enumeration value="ANSWEMACHINE" />
+      <enumeration value="CALLBACK1" />
+      <enumeration value="NOANSWER" />
+    </restriction>
+  </simpleType>
+  <!--Complex types-->
+  <complexType name="packetheadertype">
+    <sequence>
+      <element name="actionid" type="mqxcp:actionidtype" />
+    </sequence>
+  </complexType>
+  <complexType name="mocaheadertype">
+    <sequence>
+      <element name="MS15ID" type="mqxcp:ms15idtype" />
+    </sequence>
+  </complexType>
+  <complexType name="mocarequesttype">
+    <choice>
+      <element name="mocarequestterminatecall" type="mqxcp:mocarequestterminatecalltype" />
+    </choice>
+  </complexType>
+  <complexType name="mocarequestpackettype">
+    <sequence>
+      <element name="packetheader" type="mqxcp:packetheadertype" />
+      <element name="mocaheader" type="mqxcp:mocaheadertype" />
+      <element name="mocarequest" type="mqxcp:mocarequesttype" />
+    </sequence>
+  </complexType>
+  <complexType name="mocaresponsepackettype">
+    <sequence>
+      <element name="packetheader" type="mqxcp:packetheadertype" />
+      <element name="mocaheader" type="mqxcp:mocaheadertype" />
+      <element name="mocaresponse" type="mqxcp:mocaresponsetype" />
+    </sequence>
+  </complexType>
+  <!--Valid elements-->
+  <element name="mocarequestpacket" type="mqxcp:mocarequestpackettype" />
+  <element name="mocaresponsepacket" type="mqxcp:mocaresponsepackettype" />
+</schema>

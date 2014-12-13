@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="mocaresponsepacket" type="mocaresponsepacketType" />
+  <xsd:simpleType name="terminatecallType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="C1" />
+      <xsd:enumeration value="C2" />
+      <xsd:enumeration value="C3" />
+      <xsd:enumeration value="C4" />
+      <xsd:enumeration value="ANSWEMACHINE" />
+      <xsd:enumeration value="CALLBACK1" />
+      <xsd:enumeration value="NOANSWER" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="mocaresponsepacketType">
+    <xsd:sequence>
+      <xsd:element name="MOCAFIELDS" type="MOCAFIELDSType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MOCAFIELDSType">
+    <xsd:sequence>
+      <xsd:element name="actionid" type="xsd:int" />
+      <xsd:element name="MS15ID" type="xsd:string" />
+      <xsd:element name="mocarequestterminatecall" type="terminatecallType" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

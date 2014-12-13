@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="CALLDATA" type="CALLDATAType" />
+  <xsd:complexType name="CALLDATAType">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="tpnorw2FIELDS" type="tpnorw2FIELDSType" />
+        <xsd:element name="tpnorw3FIELDS" type="tpnorw3FIELDSType" />
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute name="sdftype" type="xsd:string">
+    </xsd:attribute>
+    <xsd:attribute name="noNamespaceSchemaLocation" type="xsd:string">
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:simpleType name="string3">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="string4">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="string5">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="string10">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="string15">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="15" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="string35">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="35" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="string40">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="40" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="numberType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="15" />
+      <xsd:pattern value="[0-9]" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="timeType">
+    <!--Format: hh:mm-->
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="5" />
+      <xsd:pattern value="\d{3}:\d{3}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="dateType">
+    <!--Format: yy/mm/dd-->
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="8" />
+      <xsd:pattern value="\d{2}/\d{2}/\d{2}">
+      </xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="tpnorw2FIELDSType">
+    <xsd:sequence>
+      <xsd:element ref="CAMP" />
+      <xsd:element ref="ID" />
+      <xsd:element ref="ACCOUNT" />
+      <xsd:element ref="NUMBER" />
+      <xsd:element ref="FAX" />
+      <xsd:element ref="FNAVN" />
+      <xsd:element ref="ENAVN" />
+      <xsd:element ref="FIRMA" />
+      <xsd:element ref="ADR_1" />
+      <xsd:element ref="ADR_2" />
+      <xsd:element ref="PNR" />
+      <xsd:element ref="STED" />
+      <xsd:element ref="F_01" />
+      <xsd:element ref="F_02" />
+      <xsd:element ref="F_03" />
+      <xsd:element ref="F_04" />
+      <xsd:element ref="F_05" />
+      <xsd:element ref="F_06" />
+      <xsd:element ref="F_07" />
+      <xsd:element ref="F_08" />
+      <xsd:element ref="F_09" />
+      <xsd:element ref="F_10" />
+      <xsd:element ref="CBTIME" />
+      <xsd:element ref="CBDATE" />
+      <xsd:element ref="NUMBER2" />
+      <xsd:element ref="MS15ID" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpnorw3FIELDSType">
+    <xsd:sequence>
+      <xsd:element ref="CAMP" />
+      <xsd:element ref="ID" />
+      <xsd:element ref="ACCOUNT" />
+      <xsd:element ref="SELGER" />
+      <xsd:element ref="NUMBER" />
+      <xsd:element ref="FAX" />
+      <xsd:element ref="FNAVN" />
+      <xsd:element ref="ENAVN" />
+      <xsd:element ref="FIRMA" />
+      <xsd:element ref="ADR_1" />
+      <xsd:element ref="ADR_2" />
+      <xsd:element ref="PNR" />
+      <xsd:element ref="STED" />
+      <xsd:element ref="F_01" />
+      <xsd:element ref="F_02" />
+      <xsd:element ref="F_03" />
+      <xsd:element ref="F_04" />
+      <xsd:element ref="F_05" />
+      <xsd:element ref="F_06" />
+      <xsd:element ref="F_07" />
+      <xsd:element ref="F_08" />
+      <xsd:element ref="F_09" />
+      <xsd:element ref="F_10" />
+      <xsd:element ref="F_11" />
+      <xsd:element ref="F_12" />
+      <xsd:element ref="F_13" />
+      <xsd:element ref="F_14" />
+      <xsd:element ref="F_15" />
+      <xsd:element ref="F_16" />
+      <xsd:element ref="F_17" />
+      <xsd:element ref="F_18" />
+      <xsd:element ref="F_19" />
+      <xsd:element ref="F_20" />
+      <xsd:element ref="F_21" />
+      <xsd:element ref="F_22" />
+      <xsd:element ref="F_23" />
+      <xsd:element ref="F_24" />
+      <xsd:element ref="F_25" />
+      <xsd:element ref="F_26" />
+      <xsd:element ref="F_27" />
+      <xsd:element ref="F_28" />
+      <xsd:element ref="F_29" />
+      <xsd:element ref="F_30" />
+      <xsd:element ref="K_01" />
+      <xsd:element ref="K_02" />
+      <xsd:element ref="K_03" />
+      <xsd:element ref="K_04" />
+      <xsd:element ref="K_05" />
+      <xsd:element ref="K_06" />
+      <xsd:element ref="K_07" />
+      <xsd:element ref="K_08" />
+      <xsd:element ref="K_09" />
+      <xsd:element ref="K_10" />
+      <xsd:element ref="K_11" />
+      <xsd:element ref="K_12" />
+      <xsd:element ref="K_13" />
+      <xsd:element ref="K_14" />
+      <xsd:element ref="K_15" />
+      <xsd:element ref="K_16" />
+      <xsd:element ref="K_17" />
+      <xsd:element ref="K_18" />
+      <xsd:element ref="K_19" />
+      <xsd:element ref="K_20" />
+      <xsd:element ref="K_31" />
+      <xsd:element ref="K_32" />
+      <xsd:element ref="K_33" />
+      <xsd:element ref="K_34" />
+      <xsd:element ref="K_35" />
+      <xsd:element ref="K_36" />
+      <xsd:element ref="K_37" />
+      <xsd:element ref="K_38" />
+      <xsd:element ref="K_39" />
+      <xsd:element ref="K_40" />
+      <xsd:element ref="CBTIME" />
+      <xsd:element ref="CBDATE" />
+      <xsd:element ref="NUMBER2" />
+      <xsd:element ref="MS15ID" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="CAMP" type="string15" />
+  <xsd:element name="ID" type="string15" />
+  <xsd:element name="ACCOUNT" type="numberType" />
+  <xsd:element name="SELGER" type="string4" />
+  <xsd:element name="NUMBER" type="numberType" />
+  <xsd:element name="FAX" type="string15" />
+  <xsd:element name="FNAVN" type="string35" />
+  <xsd:element name="ENAVN" type="string35" />
+  <xsd:element name="FIRMA" type="string35" />
+  <xsd:element name="ADR_1" type="string35" />
+  <xsd:element name="ADR_2" type="string35" />
+  <xsd:element name="PNR" type="string5" />
+  <xsd:element name="STED" type="string35" />
+  <xsd:element name="F_01" type="string15" />
+  <xsd:element name="F_02" type="string15" />
+  <xsd:element name="F_03" type="string15" />
+  <xsd:element name="F_04" type="string15" />
+  <xsd:element name="F_05" type="string15" />
+  <xsd:element name="F_06" type="string15" />
+  <xsd:element name="F_07" type="string15" />
+  <xsd:element name="F_08" type="string15" />
+  <xsd:element name="F_09" type="string15" />
+  <xsd:element name="F_10" type="string15" />
+  <xsd:element name="F_11" type="string15" />
+  <xsd:element name="F_12" type="string15" />
+  <xsd:element name="F_13" type="string15" />
+  <xsd:element name="F_14" type="string15" />
+  <xsd:element name="F_15" type="string15" />
+  <xsd:element name="F_16" type="string15" />
+  <xsd:element name="F_17" type="string15" />
+  <xsd:element name="F_18" type="string15" />
+  <xsd:element name="F_19" type="string15" />
+  <xsd:element name="F_20" type="string15" />
+  <xsd:element name="F_21" type="string15" />
+  <xsd:element name="F_22" type="string15" />
+  <xsd:element name="F_23" type="string15" />
+  <xsd:element name="F_24" type="string15" />
+  <xsd:element name="F_25" type="string15" />
+  <xsd:element name="F_26" type="string15" />
+  <xsd:element name="F_27" type="string15" />
+  <xsd:element name="F_28" type="string15" />
+  <xsd:element name="F_29" type="string15" />
+  <xsd:element name="F_30" type="string15" />
+  <xsd:element name="K_01" type="string3" />
+  <xsd:element name="K_02" type="string3" />
+  <xsd:element name="K_03" type="string3" />
+  <xsd:element name="K_04" type="string3" />
+  <xsd:element name="K_05" type="string3" />
+  <xsd:element name="K_06" type="string3" />
+  <xsd:element name="K_07" type="string3" />
+  <xsd:element name="K_08" type="string3" />
+  <xsd:element name="K_09" type="string3" />
+  <xsd:element name="K_10" type="string3" />
+  <xsd:element name="K_11" type="string3" />
+  <xsd:element name="K_12" type="string3" />
+  <xsd:element name="K_13" type="string3" />
+  <xsd:element name="K_14" type="string3" />
+  <xsd:element name="K_15" type="string3" />
+  <xsd:element name="K_16" type="string3" />
+  <xsd:element name="K_17" type="string3" />
+  <xsd:element name="K_18" type="string3" />
+  <xsd:element name="K_19" type="string3" />
+  <xsd:element name="K_20" type="string3" />
+  <xsd:element name="K_31" type="string3" />
+  <xsd:element name="K_32" type="string3" />
+  <xsd:element name="K_33" type="string3" />
+  <xsd:element name="K_34" type="string3" />
+  <xsd:element name="K_35" type="string3" />
+  <xsd:element name="K_36" type="string3" />
+  <xsd:element name="K_37" type="string3" />
+  <xsd:element name="K_38" type="string3" />
+  <xsd:element name="K_39" type="string3" />
+  <xsd:element name="K_40" type="string3" />
+  <xsd:element name="CBTIME" type="timeType" />
+  <xsd:element name="CBDATE" type="dateType" />
+  <xsd:element name="NUMBER2" type="string10" />
+  <xsd:element name="MS15ID" type="string40" />
+</xsd:schema>
